@@ -1,0 +1,27 @@
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    # pycodestyle warnings  
+    "W",
+    # McCabe complexity
+    "C901",
+]
+
+[tool.mypy]
+strict = true
+allow_untyped_decorators = true
+
+[[tool.mypy.overrides]]
+module = ["behave.*"]
+ignore_missing_imports = true
